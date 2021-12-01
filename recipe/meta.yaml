@@ -20,18 +20,23 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - cirq-core ~=0.12.0
+    - cirq-google ~=0.12.0
+    - deprecation
     - h5py >=2.8
+    - nbformat
     - networkx
     - numpy >=1.11.0
     - pubchempy
     - python >=3.6
     - requests ~=2.18
     - scipy >=1.1.0
+    - sympy
 
 test:
   imports:
     - openfermion
-    - openfermion.data
+    - openfermion.chem
   commands:
     - pip check
   requires:
