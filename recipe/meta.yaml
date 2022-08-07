@@ -1,5 +1,5 @@
 {% set name = "openfermion" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openfermion-{{ version }}.tar.gz
-  sha256: 0e46d442a04068d65117a4855a10d3e77e28a6544641ceb569af9cf2d7c8685c
+  sha256: 3f79e16578185291a02dc35fd8bfdce496b5dded15ea4c78485e7676c1120b4d
 
 build:
   number: 0
