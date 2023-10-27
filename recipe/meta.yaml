@@ -1,5 +1,5 @@
 {% set name = "openfermion" %}
-{% set version = "1.5.1" %}
+{% set version = "1.6.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openfermion-{{ version }}.tar.gz
-  sha256: 3f79e16578185291a02dc35fd8bfdce496b5dded15ea4c78485e7676c1120b4d
+  sha256: b41280b3f07cd4c23db486639d27a3e89e6f801c2044e7459c74f5b6aaedfaae
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - cirq-core >=0.15.0
+    - cirq-core >=1.0,<2.dev0
     - cirq-google >=0.15.0
     - deprecation
     - h5py >=2.8
@@ -29,7 +29,7 @@ requirements:
     - pubchempy
     - python >=3.6
     - requests >=2.18
-    - scipy >=1.1.0
+    - scipy >=1.1.0,<1.10.0
     - sympy
 
 test:
