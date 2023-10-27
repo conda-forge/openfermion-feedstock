@@ -1,11 +1,11 @@
-About openfermion
-=================
+About openfermion-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openfermion-feedstock/blob/main/LICENSE.txt)
 
 Home: https://quantumai.google/openfermion
 
 Package license: Apache-2.0 AND BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/openfermion-feedstock/blob/main/LICENSE.txt)
 
 Summary: The electronic structure package for quantum computers.
 
