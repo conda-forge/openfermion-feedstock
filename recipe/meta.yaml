@@ -1,5 +1,5 @@
 {% set name = "openfermion" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openfermion-{{ version }}.tar.gz
-  sha256: b41280b3f07cd4c23db486639d27a3e89e6f801c2044e7459c74f5b6aaedfaae
+  sha256: d7f1df4cf98feaa577a070cb432e3d05863c73a4f3bc1f7d112914cf2a3c9bcb
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - pubchempy
     - python >=3.6
     - requests >=2.18
-    - scipy >=1.1.0,<1.10.0
+    - scipy >=1.1.0
     - sympy
 
 test:
