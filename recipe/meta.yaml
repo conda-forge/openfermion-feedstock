@@ -7,18 +7,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openfermion-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openfermion-{{ version }}.tar.gz
   sha256: b41280b3f07cd4c23db486639d27a3e89e6f801c2044e7459c74f5b6aaedfaae
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - cirq-core >=1.0,<2.dev0
     - cirq-google >=0.15.0
@@ -27,7 +27,7 @@ requirements:
     - networkx
     - numpy >=1.11.0
     - pubchempy
-    - python >=3.6
+    - python >={{ python_min }}
     - requests >=2.18
     - scipy >=1.1.0,<1.10.0
     - sympy
@@ -40,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://quantumai.google/openfermion
