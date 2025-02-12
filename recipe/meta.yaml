@@ -1,5 +1,6 @@
 {% set name = "openfermion" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
+{% set python_min = "3.10" %}
 
 
 package:
@@ -8,10 +9,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openfermion-{{ version }}.tar.gz
-  sha256: b41280b3f07cd4c23db486639d27a3e89e6f801c2044e7459c74f5b6aaedfaae
+  sha256: 1728768c318b50e58a888a4657c2e87a39111022eff32f7729f3eda729da81a8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,17 +20,17 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    - setuptools
   run:
-    - cirq-core >=1.0,<2.dev0
-    - cirq-google >=0.15.0
+    - cirq-core
     - deprecation
-    - h5py >=2.8
+    - h5py >=3.10.0
     - networkx
-    - numpy >=1.11.0
+    - numpy >=1.24,<2.0
     - pubchempy
     - python >={{ python_min }}
-    - requests >=2.18
-    - scipy >=1.1.0,<1.10.0
+    - requests >=2.32.2,<2.33.dev0
+    - scipy >=1.15,<2.dev0
     - sympy
 
 test:
