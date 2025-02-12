@@ -19,9 +19,9 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
+    setuptools
   run:
     - cirq-core
-    - cirq-google >=0.15.0
     - deprecation
     - h5py >=3.10.0
     - networkx
